@@ -1,3 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "League Spartan", sans-serif;
+  }
+
+  body {
+    @apply font-bold leading-none bg-blue-dark-main min-h-screen grid place-content-center px-6;
+  }
+}
+
+.theme-toggle-button {
+  @apply w-[18px] h-[18px] bg-red-keybg rounded-full hover:bg-red-hov transition-colors duration-300;
+}
+
+.btn-common {
+  @apply bg-blue-desaturated-keybg text-white text-[28px] max-sm:text-[20px] shadow-blue-desaturated hover:bg-blue-hov;
+}
+
+.btn-equals {
+  @apply bg-red-keybg text-white text-[28px] max-sm:text-[20px] shadow-red-dark hover:bg-red-hov col-span-2;
+}
+
+.btn-default {
+  @apply bg-orange-light-keybg text-grayish-blue-dark text-[40px] max-sm:text-[32px] shadow-orange-grayish hover:bg-white;
+}
+
+.btn {
+  @apply rounded-[10px] grid place-content-center h-[60px] min-w-[60px] uppercase transition-colors duration-300 select-none;
+}
